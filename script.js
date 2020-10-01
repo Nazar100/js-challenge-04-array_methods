@@ -108,7 +108,7 @@ let newPeople = people
 //   .map((person) => {
 //     return person[1] + " " + person[0];
 //   });
-console.log(newPeople);
+// console.log(newPeople);
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
@@ -128,3 +128,11 @@ const data = [
   "car",
   "truck",
 ];
+const transporation = data.reduce((obj, item) => {
+  if (!obj[item]) {
+    obj[item] = 0;
+  }
+  obj[item]++;
+  return obj;
+}, {});
+console.log(transporation);
